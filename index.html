@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NoNamedSearch</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://kit.fontawesome.com/fe85db6219.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Home Page -->
+  <div id="homePage">
+    <div id="mainContent">
+      <!-- Wrap home screen content in its own container -->
+      <div id="homeContent">
+        <!-- Logo Section -->
+        <div class="logo-content">
+          <h1 class="logo">
+            <a class="logo-n">N</a><a class="logo-o">o</a><p class="logo" id="logoThick"><a class="logo-n">N</a><a class="logo-a">a</a><a class="logo-m">m</a><a class="logo-e">e</a><a class="logo-d">d</a></p><a class="logo-s">S</a><a class="logo-e">e</a><a class="logo-a">a</a><a class="logo-r">r</a><a class="logo-c">c</a><a class="logo-h">h</a>
+          </h1>
+        </div>
+
+        <!-- Search Box -->
+        <div class="searchBox">
+          <i id="searchIcon" class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" class="search" placeholder="Search here"/>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="profile" id="profileContainer">
+          <div id="userIcon" class="user-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <img id="profilePic" class="pfp hide" src="https://lh3.googleusercontent.com/ogw/AF2bZyiJ2itcLLrSi4pzAyeQ_qkEYONJHHh58jreEsmbazd7U-k=s64-c-mo" alt="The Unnamed"/>
+
+          <!-- Logout Popup -->
+          <div class="logout-popup" id="logoutPopup">
+            <button id="logoutBtn" class="logout-btn">
+              <i class="fa-solid fa-right-from-bracket"></i>
+            </button>
+          </div>
+
+          <!-- Login Popup -->
+          <div class="login-popup" id="loginPopup">
+            <button id="loginBtn" class="login-btn">
+              <i class="fa-solid fa-right-to-bracket"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Customize Button -->
+        <div class="customize">
+          <button id="customizeBtn" class="customize-btn">
+            <i id="customizeIcon" class="fa-solid fa-pen"></i>
+            Customize Preferences
+          </button>
+        </div>
+
+        <!-- Loading Screen -->
+        <div id="loadingScreen" class="loading-overlay" style="display: none;">
+          <div class="loader"></div>
+          <p>Loading...</p>
+        </div>
+      </div><!-- End #homeContent -->
+    </div><!-- End #mainContent -->
+  </div><!-- End #homePage -->
+
+  <!-- Search Results Container -->
+  <div id="resultsContent" style="display: none;">
+    <!-- Search results will be inserted here -->
+  </div>
+
+  <!-- Theme Sidebar -->
+  <div class="theme-sidebar" id="themeSidebar">
+    <h2>Appearance</h2>
+    <p>Select a theme:</p>
+    <button class="theme-option" id="systemTheme">System Default</button>
+    <button class="theme-option" id="darkTheme">Dark</button>
+    <button class="theme-option" id="lightTheme">Light</button>
+    <!-- The label is styled like a button and is linked to the hidden color picker -->
+    <label for="customColorPicker" class="theme-option custom-color-label">Custom</label>
+    <!-- The color input is present but invisible (opacity 0) and sized so it still works -->
+    <input type="color" id="customColorPicker" class="custom-color-input" value="#ffffff">
+    <div class="close-btn" id="closeThemeSidebar">
+      <i id="xMark" class="fa-solid fa-xmark"></i>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
