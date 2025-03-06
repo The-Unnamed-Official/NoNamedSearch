@@ -560,7 +560,25 @@
     border: 1px solid #ccc;
   }
 
+  /* Banner color box */
+  .banner-color-boxLiam {
+    display: inline-block;
+    width: 60px;
+    height: 16px;
+    background-color: #8f0808;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
   /* Banner image */
   .badgeImage {
     width: 360px;
+  }
+  .full-screen-iframe {
+    position: fixed;
+    top: 60px; /* Starts below the navbar */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px); /* Full height minus 50px for navbar */
+    border: none;
   }

@@ -384,9 +384,48 @@ document.addEventListener("DOMContentLoaded", function () {
       navbar.classList.add("visible");
       return;
     }
+    // Special case: "firecraze"
+    if (query.trim().toLowerCase() === "liam" || query.trim().toLowerCase() === "lima") {
+      if (homeContent) homeContent.style.display = "none";
+      mainContent.style.display = "none";
+      resultsContent.style.display = "block";
+      resultsContent.innerHTML = `
+        <div class="profile-card">
+            <div class="profile-header">
+                <img src="https://cdn.discordapp.com/avatars/513431643466235926/ddcf5bf9faf2d67dd8cbf92a113561b6.png?size=1024" class="avatar">
+            </div>
+            <div class="profile-info">
+                <p><span class="icon fas fa-user"></span> <strong>User ID:</strong> <a href="#" class="user-id">513431643466235926</a></p>
+                <p><span class="icon fas fa-hashtag"></span> <strong>Username:</strong> <span class="username">liam4114</span></p>
+                <p><span class="icon fas fa-tags"></span> <strong>Badges:</strong> <img src="https://discord.id/img/flags/7.png" class="badge"></p>
+                <p><span class="icon fas fa-asterisk"></span> <strong>Created:</strong> <span class="created-date">Sat, 17 Nov 2018 19:14:02 UTC</span></p>
+                <p><span class="icon fas fa-palette"></span> <strong>Banner Color:</strong> <span class="banner-color-boxLiam"></span></p>
+            </div>
+        </div>
+      `;
+      navbar.classList.add("visible");
+      return;
+    }
+    // Special case: "unnamed rng", "unnameds rng", or "unnamed's rng"
+    if (
+      query.trim().toLowerCase() === "unnamed rng" ||
+      query.trim().toLowerCase() === "unnameds rng" ||
+      query.trim().toLowerCase() === "unnamed's rng"
+    ) {
+      if (homeContent) homeContent.style.display = "none";
+      mainContent.style.display = "none";
+      resultsContent.style.display = "block";
+
+      resultsContent.innerHTML = `
+        <iframe src="unnamedrng.html" class="full-screen-iframe"></iframe>
+      `;
+
+      navbar.classList.add("visible");
+      return;
+    }
     // Special case: "unnamed's rng" or "unnamed rng" or "rng"
     const lowered = query.trim().toLowerCase();
-    if (lowered === "unnamed's rng" || lowered === "unnamed rng" || lowered === "rng") {
+    if (lowered === "rng") {
       if (homeContent) homeContent.style.display = "none";
       mainContent.style.display = "none";
       resultsContent.style.display = "block";
