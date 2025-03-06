@@ -384,7 +384,30 @@ document.addEventListener("DOMContentLoaded", function () {
       navbar.classList.add("visible");
       return;
     }
-    // Special case: "firecraze"
+    // Special case: "shenvi"
+    if (query.trim().toLowerCase() === "shenvi" || query.trim().toLowerCase() === "shenvii") {
+      if (homeContent) homeContent.style.display = "none";
+      mainContent.style.display = "none";
+      resultsContent.style.display = "block";
+      resultsContent.innerHTML = `
+        <div class="profile-card">
+            <div class="profile-header">
+                <img src="https://cdn.discordapp.com/avatars/518400920048893952/50764303ed018d64af8177fb42a5cef3.webp?size=1024&width=410&height=410" class="avatar">
+            </div>
+            <div class="profile-info">
+                <p><span class="icon fas fa-user"></span> <strong>User ID:</strong> <a href="#" class="user-id">518400920048893952</a></p>
+                <p><span class="icon fas fa-hashtag"></span> <strong>Username:</strong> <span class="username">shenevii</span></p>
+                <p><span class="icon fas fa-tags"></span> <strong>Badges:</strong> <img src="https://discord.id/img/flags/8.png" class="badge"></p>
+                <p><span class="icon fas fa-asterisk"></span> <strong>Created:</strong> <span class="created-date">Sat, 01 Dec 2018 12:20:10 UTC</span></p>
+                <p><span class="icon fas fa-palette"></span> <strong>Banner Color:</strong> <span class="banner-color-boxEmpty"></span></p>
+                <p><span class="icon fas fa-palette"></span> <img src="https://cdn.discordapp.com/banners/518400920048893952/a_6a5a18d2ae0c2498d99996f863e04fe6.gif?size=1024" class="badgeImage"></p>
+            </div>
+        </div>
+      `;
+      navbar.classList.add("visible");
+      return;
+    }
+    // Special case: "liam"
     if (query.trim().toLowerCase() === "liam" || query.trim().toLowerCase() === "lima") {
       if (homeContent) homeContent.style.display = "none";
       mainContent.style.display = "none";
