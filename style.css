@@ -255,56 +255,68 @@
       text-align: left;
   }
   .results-page {
-      margin-top: 60px;
+      margin: 80px auto 40px;
       padding: 20px;
+      max-width: 900px;
   }
   .results-page h2 {
       color: #333;
+      margin-bottom: 16px;
   }
   .result {
       margin-top: 20px;
-      padding: 10px;
+      padding-bottom: 16px;
       border-bottom: 1px solid #ddd;
+      word-break: break-word;
+  }
+  .result:last-child {
+      border-bottom: none;
   }
   .result a {
-    color: #3498db;
-    font-size: 18px;
+    color: #1a0dab;
+    font-size: 20px;
     text-decoration: none;
   }
-  .simulated-visited {
-    color: #8a39c0 !important;
-  }
-  .simulated-visited:hover {
-    color: #8a39c0 !important;
-  }
   .result a:hover {
-      color: #3498db;
-      font-size: 18px;
       text-decoration: underline;
+  }
+  .result-url {
+      display: block;
+      color: #006621;
+      font-size: 14px;
+      margin-top: 6px;
   }
   .result p {
       color: #555;
-      margin-top: 5px;
+      margin-top: 6px;
+      line-height: 1.6;
   }
-  .resultLine {
-      margin-top: 10px;
-      margin-left: 40px;
-      padding: 10px;
-      border-bottom: 1px solid #ddd;
-  }
-  .resultLine a {
-      color: #3498db;
+  .no-results,
+  .error-message {
+      margin-top: 20px;
       font-size: 18px;
-      text-decoration: none;
+      line-height: 1.6;
   }
-  .resultLine a:hover {
-      color: #3498db;
-      font-size: 18px;
-      text-decoration: underline;
+  .error-message {
+      color: #c0392b;
   }
-  .resultLine p {
-      color: #555;
-      margin-top: 5px;
+  body.dark-mode .results-page h2 {
+      color: #f0f8ff;
+  }
+  body.dark-mode .result a {
+      color: #8ab4f8;
+  }
+  body.dark-mode .result a:hover {
+      color: #aecbfa;
+  }
+  body.dark-mode .result-url {
+      color: #7dd892;
+  }
+  body.dark-mode .no-results {
+      color: #f0f8ff;
+  }
+  body.dark-mode .error-message {
+      color: #ff7675;
   }
   .customize {
     position: absolute;
@@ -381,70 +393,6 @@
   #mainContent.shrink {
     margin-right: 300px;
   }
-  /* Styles for the "It's me!" special result */
-  .unnamed-special {
-    text-align: center;
-    padding: 40px;
-    margin: 20px;
-    border-radius: 10px;
-    background-color: #f0f8ff;  /* Light background */
-    color: #1a1a1a;
-  }
-  body.dark-mode .unnamed-special {
-    background-color: #1a1a1a;
-    color: #f0f8ff;
-  }
-
-  /* Styles for the RNG container */
-  .rng-container {
-    width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    background-color: #f8f8f8;
-  }
-  body.dark-mode .rng-container {
-    background-color: #333;
-    border-color: #555;
-    color: #f0f8ff;
-  }
-  .rng-container button {
-    font-size: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #23c8ff;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  .rng-container button:hover {
-    background-color: #1a9cd3;
-  }
-  .rng-container input {
-    font-size: 18px;
-    padding: 5px;
-    width: 80px;
-    text-align: center;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  body.dark-mode .rng-container input {
-    background-color: #555;
-    border-color: #777;
-    color: #f0f8ff;
-  }
-  .rng-result {
-    font-size: 80px;
-    margin-top: 20px;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
   /* Style the custom color label as a button */
   .custom-color-label {
     display: inline-block;
@@ -466,129 +414,4 @@
   .custom-color-input {
     opacity: 0;
     pointer-events: none;
-  }
-
-
-  /* Center the profile card */
-  .profile-card {
-    background-color: #1e1e24;
-    border-radius: 8px;
-    padding: 20px;
-    width: 400px;
-    color: white;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  /* Profile image */
-  .profile-header {
-    text-align: left;
-  }
-
-  .avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-  }
-
-  /* Profile information */
-  .profile-info {
-    margin-top: 15px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    text-align: left;
-  }
-
-  .profile-info p {
-    margin: 10px 0; /* Adjust space between lines */
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    gap: 8px; /* Spacing between icons and text */
-  }
-
-  .icon {
-    margin-right: -5px;
-  }
-
-  /* Text styling */
-  .user-id {
-    color: #4c8bf5;
-    text-decoration: none;
-  }
-
-  .username {
-    color: #e49aff;
-  }
-
-  .created-date {
-    color: #81c886;
-  }
-
-  /* Badge image */
-  .badge {
-    height: 26px;
-    vertical-align: middle;
-  }
-
-  /* Banner color box */
-  .banner-color-boxWhite {
-    display: inline-block;
-    width: 60px;
-    height: 16px;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-
-  /* Banner color box */
-  .banner-color-boxFire {
-    display: inline-block;
-    width: 60px;
-    height: 16px;
-    background-color: #380300;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-
-  /* Banner color box */
-  .banner-color-boxLiam {
-    display: inline-block;
-    width: 60px;
-    height: 16px;
-    background-color: #8f0808;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-
-  /* Banner color box */
-  .banner-color-boxEmpty {
-    display: inline-block;
-    width: 60px;
-    height: 16px;
-    background-color: #000000;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-
-  /* Banner image */
-  .badgeImage {
-    width: 360px;
-  }
-  .full-screen-iframe {
-    position: fixed;
-    top: 60px; /* Starts below the navbar */
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 60px); /* Full height minus 50px for navbar */
-    border: none;
   }
